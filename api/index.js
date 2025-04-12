@@ -135,7 +135,11 @@ app.post("/createEvent", upload.single("image"), async (req, res) => {
       res.status(500).json({ error: "Failed to save the event to MongoDB" });
    }
 });
-
+// Example for Express
+app.get('/', (req, res) => {
+   res.send('Backend is running!');
+ });
+ 
 app.get("/createEvent", async (req, res) => {
    try {
       const events = await Event.find();
