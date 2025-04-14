@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
    cors({
       credentials: true,
-      origin: ["https://events-production-c481.up.railway.app"]
+      origin: "https://events-production-c5f7.up.railway.app",
    })
 );
 
