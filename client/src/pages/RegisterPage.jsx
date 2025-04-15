@@ -2,7 +2,7 @@
 import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-
+import logo from '../assets/logo.png';
 export default function RegisterPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -50,7 +50,7 @@ export default function RegisterPage() {
         </div>
 
         <div className="ml-48 w-80 mt-6">
-        <img src="../src/assets/signuppic.svg" alt="" className='w-full'/>
+        <img src={logo} alt="Logo" className='w-full'/>
         </div>   
       
     </div>
