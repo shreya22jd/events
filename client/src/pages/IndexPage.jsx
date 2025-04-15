@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BiLike } from "react-icons/bi";
-import {hero} from "../assets/hero.jpg"
+import hero from "../assets/hero.jpg"
   export default function IndexPage() {
     const [events, setEvents] = useState([]);
 
