@@ -16,36 +16,34 @@ import CalendarView from './pages/CalendarView'
 import OrderSummary from './pages/OrderSummary'
 import PaymentSummary from './pages/PaymentSummary'
 import TicketPage from './pages/TicketPage'
-import CreatEvent from './pages/CreateEvent'
+import CreateEvent from './pages/CreateEvent' // Corrected import
 
-axios.defaults.baseURL = 'https://events-production-c481.up.railway.app/';
-axios.defaults.withCredentials=true;
+// No need for require("dotenv").config() in React
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
-    <UserContextProvider> 
-    <Routes>
-            
-      <Route path='/' element={<Layout />}>
-        <Route index element = {<IndexPage />} />
-        <Route path='/useraccount' element = {<UserAccountPage />}/>
-        <Route path='/createEvent' element = {<AddEvent/>} />
-        <Route path='/event/:id' element= {<EventPage/>} />
-        <Route path='/calendar' element={<CalendarView />} />
-        <Route path='/wallet' element={<TicketPage />}/>
-        <Route path='/event/:id/ordersummary' element = {<OrderSummary />} />
-      </Route>
+    <UserContextProvider>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<IndexPage />} />
+          <Route path='/useraccount' element={<UserAccountPage />} />
+          <Route path='/createEvent' element={<AddEvent />} />
+          <Route path='/event/:id' element={<EventPage />} />
+          <Route path='/calendar' element={<CalendarView />} />
+          <Route path='/wallet' element={<TicketPage />} />
+          <Route path='/event/:id/ordersummary' element={<OrderSummary />} />
+        </Route>
 
-      <Route path='/register' element={<RegisterPage />}/>
-      <Route path='/login' element={<LoginPage />}/>
-      <Route path='/forgotpassword' element = {<ForgotPassword/>} />
-      <Route path='/resetpassword' element = {<ResetPassword/>} />
-      <Route path='/event/:id/ordersummary/paymentsummary' element = {<PaymentSummary />} />
-      
-    
-    </Routes>
-    </UserContextProvider>  
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/forgotpassword' element={<ForgotPassword />} />
+        <Route path='/resetpassword' element={<ResetPassword />} />
+        <Route path='/event/:id/ordersummary/paymentsummary' element={<PaymentSummary />} />
+      </Routes>
+    </UserContextProvider>
   )
 }
 
-export default App
+export default App;

@@ -4,19 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "node ./node_modules/vite/bin/vite.js build",
-  "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-  "preview": "vite preview"
-}
-,
+    "dev": "vite",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
   "engines": {
-  "node": "18.x"
-},
+    "node": "18.x"
+  },
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.5.0",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
+    "dotenv": "^16.5.0",
     "esbuild": "^0.25.2",
     "mongoose": "^7.4.4",
     "postcss-selector-parser": "^7.1.0",
