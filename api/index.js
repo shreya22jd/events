@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
    cors({
       credentials: true,
-      origin: "https://events-production-c5f7.up.railway.app",
+      origin: "https://frontend-git-main-shreya22jds-projects.vercel.app",
    })
 );
 

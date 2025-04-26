@@ -18,7 +18,7 @@ import PaymentSummary from './pages/PaymentSummary'
 import TicketPage from './pages/TicketPage'
 import CreatEvent from './pages/CreateEvent'
 
-axios.defaults.baseURL = 'https://events-zeta-nine.vercel.app/';
+axios.defaults.baseURL = 'https://events-zeta-nine.vercel.app';
 axios.defaults.withCredentials=true;
 
 function App() {
