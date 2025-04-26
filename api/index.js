@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
    cors({
       credentials: true,
-      origin: "https://frontend-git-main-shreya22jds-projects.vercel.app",
+      origin: "https://frontend-orcin-eight-51.vercel.app",
    })
 );
 
